@@ -30,6 +30,26 @@
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
+            var buildings = [{
+             position: new google.maps.LatLng(41.4384982,-112.6646487),
+             map: map,
+             title:"un-named road"
+         },
+         {
+             position: new google.maps.LatLng(41.4379113,-112.6691327),
+             map: map,
+             title:"Spiral Jetty"
+         },
+         {
+             position: new google.maps.LatLng(41.4379113,-112.6691327),
+             map: map,
+             title:"RV"
+       }];
+
+       for(var i=0; i<buildings.length; i++) {
+         new google.maps.Marker(buildings[i]);
+       }
+
       }
 
       //add the map to the page, when the page is ready
